@@ -20,10 +20,10 @@ To use this package, add the following line to your `pubspec.yaml` under depende
 
 ```yaml
 dependencies:
-  flutter_styling_text_editor: ^1.0.0  
+  flutter_styling_text_editor: ^1.0.1  
 ```
 Then run:
-```dart
+```bash
   flutter pub get
 ```
 

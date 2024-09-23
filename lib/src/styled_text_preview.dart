@@ -69,8 +69,7 @@ class StyledTextPreview extends StatelessWidget {
             fontSize: fontSize ?? 16
           );
           matchedText = matchedText.substring(3, matchedText.length - 3);
-            } 
-        else if (matchedText.startsWith('**') && matchedText.endsWith('**')) {
+        } else if (matchedText.startsWith('**') && matchedText.endsWith('**')) {
           style = TextStyle(
             fontWeight: FontWeight.bold,
             color: fontColor ?? Colors.black,

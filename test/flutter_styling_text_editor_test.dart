@@ -69,10 +69,10 @@ void main() {
   group('StyledTextPreview Tests', () {
     testWidgets('Should parse and display styled text correctly', (WidgetTester tester) async {
       // Text with bold, italic and underline styles
-      final String styledText = '**Bold** *Italic* __Underline__';
+      const String styledText = '**Bold** *Italic* __Underline__';
 
       // Build StyledTextPreview widget
-      await tester.pumpWidget(MaterialApp(
+      await tester.pumpWidget(const MaterialApp(
         home: Scaffold(
           body: StyledTextPreview(
             text: styledText,

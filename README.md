@@ -10,7 +10,8 @@ Flutter Styling Text Editor is a lightweight package that allows you to easily e
 - Preview styled text using a separate widget, `StyledTextPreview`.
 - Simple and easy to integrate into any Flutter project.
 
-![Preview](https://github.com/jayawardhanadskp/FlutterStylingTextEditor/blob/master/assets/styled_text_editor.gif)
+
+<img src="https://github.com/jayawardhanadskp/FlutterStylingTextEditor/blob/master/assets/styled_text_editor.gif" alt="Preview" width="400" height="600" />
 
 
 ## Getting Started

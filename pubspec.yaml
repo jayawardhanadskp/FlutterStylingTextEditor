@@ -1,6 +1,6 @@
 name: flutter_styling_text_editor
 description: "A Flutter package to create and preview styled text with rich formatting options."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/jayawardhanadskp/FlutterStylingTextEditor
 repository: https://github.com/jayawardhanadskp/FlutterStylingTextEditor
 issue_tracker: https://github.com/jayawardhanadskp/FlutterStylingTextEditor/issues

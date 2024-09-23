@@ -10,6 +10,7 @@ Flutter Styling Text Editor is a lightweight package that allows you to easily e
 - Preview styled text using a separate widget, `StyledTextPreview`.
 - Simple and easy to integrate into any Flutter project.
 
+![Preview](https://github.com/jayawardhanadskp/FlutterStylingTextEditor/blob/master/assets/styled_text_editor.gif)
 
 
 ## Getting Started
@@ -18,7 +19,7 @@ To use this package, add the following line to your `pubspec.yaml` under depende
 
 ```yaml
 dependencies:
-  flutter_styling_text_editor: ^0.1.0  
+  flutter_styling_text_editor: ^1.0.0  
 ```
 Then run:
 ```dart
@@ -103,10 +104,6 @@ StyledTextPreview(
 
 When you need to display the styled text, retrieve the stored text from the database and use the StyledTextPreview widget to render it
 
-## Full Example
-
-The `StyledTextEditor` allows you to input styled text, and it outputs the final styled result in a markdown-like syntax. This final result can be stored in a database or any persistent storage.
-
 ```dart
 String _retrievedStyledText = ''; // Retrieved styled text from database
 
@@ -125,6 +122,10 @@ StyledTextPreview(
   fontSize: 16,
 );
 ```
+
+## Full Example
+
+The `StyledTextEditor` allows you to input styled text, and it outputs the final styled result in a markdown-like syntax. This final result can be stored in a database or any persistent storage.
 
 ```dart
 import 'package:flutter/material.dart';

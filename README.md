@@ -1,10 +1,10 @@
 
 # Flutter Styling Text Editor
 
-Flutter Styling Text Editor is a lightweight package that allows you to easily edit and preview styled text in Flutter applications. **This sopports all of the platforms.** The package provides a customizable text editor where users can apply styles like **bold**, *italic*, and __underline__ to the text. Once the text is styled, you can save the styled result to a database and retrieve it later for preview or further use. This package is ideal for admin panels where administrators need to input and manage styled content that users can view in a mobile or web app.
+Flutter Styling Text Editor is a lightweight package that allows you to easily edit and preview styled text in Flutter applications. **This supports all of the platforms.** The package provides a customizable text editor where users can apply styles like **bold**, *italic*, and __underline__ to the text. Once the text is styled, you can save the styled result to a database and retrieve it later for preview or further use. This package is ideal for admin panels where administrators need to input and manage styled content that users can view in a mobile or web app.
 
 ## Features
-- Rich text editing with styles like **Bold**, *Italic*, and __Underline__.
+- Rich text editing with styles like **Bold**, *Italic*, and <u>Underline</u>.
 - Save the styled text result for later use (e.g., store it in a database).
 - Directly use the styled text from a variable without saving.
 - Preview styled text using a separate widget, `StyledTextPreview`.

@@ -59,8 +59,7 @@ class _StyledTextEditorState extends State<StyledTextEditor> {
         }
 
         // Add the new segment to text segments
-        _textSegments
-            .add(StyledTextSegment(_currentText, _activeStyles.toList()));
+        _textSegments.add(StyledTextSegment(_currentText, _activeStyles.toList()));
 
         // Update finalResult with the new styled segment
         finalResult += styledText; // Add space for separation

@@ -30,6 +30,7 @@ class StyledTextEditor extends StatefulWidget {
   /// The font size used for the text in the editor.
   final double? fontSize;
 
+  /// The [StyledTextEditor] widget provides a text field where the user can input text and apply styles to it.
   const StyledTextEditor({
     super.key,
     required this.controller,
@@ -318,8 +319,12 @@ List<TextSpan> _buildTextSpans(List<StyledTextSegment> segments) {
 
 /// A class representing a segment of text with associated styles (bold, italic, underline).
 class StyledTextSegment {
+  /// [text] is the content of the text segment
   final String text;
+
+  ///  [styles] is a list of styles applied to that text.
   final List<String> styles;
 
+  /// Creates an instance of [StyledTextSegment] with the given [text] and [styles].
   StyledTextSegment(this.text, this.styles);
 }

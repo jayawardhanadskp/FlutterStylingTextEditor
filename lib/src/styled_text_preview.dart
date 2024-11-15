@@ -16,6 +16,7 @@ class StyledTextPreview extends StatelessWidget {
   /// The font size to be used for the text.
   final double? fontSize;
 
+  /// The [StyledTextPreview] widget parses the input text and applies styles such as bold, italic, and underline.
   const StyledTextPreview({
     super.key,
     required this.text,

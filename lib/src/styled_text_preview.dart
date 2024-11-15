@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 
+/// A widget that previews styled text using Markdown-like syntax.
+///
+/// The [StyledTextPreview] widget parses the input text and applies styles such as bold, italic, and underline.
 class StyledTextPreview extends StatelessWidget {
+  /// The raw text input to be displayed with styling.
   final String text;
+
+  /// The color of the font.
   final Color? fontColor;
+
+  /// The font family to be used for the text.
   final String? fontFamily;
+
+  /// The font size to be used for the text.
   final double? fontSize;
+
   const StyledTextPreview({
     super.key,
     required this.text,
@@ -15,6 +26,7 @@ class StyledTextPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// Parses the styled text and returns a [TextSpan] with the corresponding text styles.
     TextSpan parseStyledText(String text) {
       List<TextSpan> spans = [];
       final RegExp regex = RegExp(

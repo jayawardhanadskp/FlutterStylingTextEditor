@@ -1,14 +1,35 @@
 import 'package:flutter/material.dart';
 
+/// A customizable text editor widget that allows styling text with various attributes like bold, italic, and underline.
+///
+/// The [StyledTextEditor] widget provides a text field where the user can input text and apply styles to it.
 class StyledTextEditor extends StatefulWidget {
+  /// The [TextEditingController] used to control the input text field.
   final TextEditingController controller;
+
+  /// A callback function that is triggered when the text content changes.
   final ValueChanged<String> onTextChange;
+
+  /// The background color of the text editor widget.
+  /// Defaults to `Colors.grey[300]` if not specified.
   final Color? backgroundColor;
+
+  /// The border radius of the text editor's container.
+  /// Defaults to `10` if not specified.
   final double? boarderRadius;
+
+  /// The background color of the text area where text is displayed.
   final Color? textEditorColor;
+
+  /// The color of the text within the editor.
   final Color? textColor;
+
+  /// The font family used in the text editor.
   final String? fontFamily;
+
+  /// The font size used for the text in the editor.
   final double? fontSize;
+
   const StyledTextEditor({
     super.key,
     required this.controller,
@@ -26,11 +47,14 @@ class StyledTextEditor extends StatefulWidget {
 }
 
 class _StyledTextEditorState extends State<StyledTextEditor> {
-  final Set<String> _activeStyles = {};
-  final List<StyledTextSegment> _textSegments = [];
-  String _currentText = '';
-  String finalResult = '';
+  final Set<String> _activeStyles =
+      {}; // Tracks active styles (bold, italic, underline)
+  final List<StyledTextSegment> _textSegments =
+      []; // List of styled text segments
+  String _currentText = ''; // The current text from the controller
+  String finalResult = ''; // The final result that combines all styled text
 
+  /// Toggles the given text style between active and inactive states.
   void _toggleStyle(String style) {
     setState(() {
       if (_activeStyles.contains(style)) {
@@ -41,6 +65,7 @@ class _StyledTextEditorState extends State<StyledTextEditor> {
     });
   }
 
+  /// Handles changes in the text field and applies the active styles to the input text.
   void _onTextChanged() {
     setState(() {
       _currentText = widget.controller.text;
@@ -48,6 +73,7 @@ class _StyledTextEditorState extends State<StyledTextEditor> {
         // Format text based on active styles
         String styledText = _currentText;
 
+        // Apply active styles to the text
         if (_activeStyles.contains('bold')) {
           styledText = '**$styledText**';
         }
@@ -73,6 +99,7 @@ class _StyledTextEditorState extends State<StyledTextEditor> {
     });
   }
 
+  /// Deletes the last segment of styled text from the editor.
   void _deleteLastSegment() {
     setState(() {
       if (_textSegments.isNotEmpty) {
@@ -83,6 +110,7 @@ class _StyledTextEditorState extends State<StyledTextEditor> {
     });
   }
 
+  /// Clears all the text and style segments in the editor.
   void _clearAllText() {
     setState(() {
       _textSegments.clear();
@@ -90,6 +118,7 @@ class _StyledTextEditorState extends State<StyledTextEditor> {
     });
   }
 
+  /// Formats the given [StyledTextSegment] into a styled string.
   String formatStyledText(StyledTextSegment segment) {
     String styledText = segment.text;
     if (segment.styles.contains('bold')) {
@@ -261,6 +290,9 @@ class _StyledTextEditorState extends State<StyledTextEditor> {
   }
 }
 
+/// Builds a list of [TextSpan] widgets from a list of [StyledTextSegment].
+///
+/// Each segment contains text with associated styles, such as bold, italic, or underline.
 List<TextSpan> _buildTextSpans(List<StyledTextSegment> segments) {
   List<TextSpan> textSpans = [];
 
@@ -284,6 +316,7 @@ List<TextSpan> _buildTextSpans(List<StyledTextSegment> segments) {
   return textSpans;
 }
 
+/// A class representing a segment of text with associated styles (bold, italic, underline).
 class StyledTextSegment {
   final String text;
   final List<String> styles;

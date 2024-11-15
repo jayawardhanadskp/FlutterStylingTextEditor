@@ -28,7 +28,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePage> {
-  final _textController = TextEditingController(); // Controller for the text editor
+  final _textController =
+      TextEditingController(); // Controller for the text editor
   String _finalStyledText = ''; // This will hold the final styled text
 
   @override
@@ -39,7 +40,8 @@ class MyHomePageState extends State<MyHomePage> {
           Center(
             child: StyledTextEditor(
               controller: _textController, // Controller for text input
-              backgroundColor:Colors.grey[300], // Background color of the editor
+              backgroundColor:
+                  Colors.grey[300], // Background color of the editor
               boarderRadius: 10, // Border radius for the full StyledTextEditor
               textEditorColor: Colors.white, // Color of the StyledTextEditor
               textColor: Colors.black, // Text color inside the editor
@@ -47,7 +49,8 @@ class MyHomePageState extends State<MyHomePage> {
               fontFamily: '', // Font family (empty uses default)
               onTextChange: (result) {
                 setState(() {
-                  _finalStyledText = result; // Update the styled text when the user types
+                  _finalStyledText =
+                      result; // Update the styled text when the user types
                 });
               },
             ),

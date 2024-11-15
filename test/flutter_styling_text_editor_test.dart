@@ -4,9 +4,11 @@ import 'package:flutter_styling_text_editor/flutter_styling_text_editor.dart';
 
 void main() {
   group('StyledTextEditor Tests', () {
-    testWidgets('Should render initial text correctly', (WidgetTester tester) async {
+    testWidgets('Should render initial text correctly',
+        (WidgetTester tester) async {
       // Create a controller with initial text
-      final TextEditingController controller = TextEditingController(text: 'Hello');
+      final TextEditingController controller =
+          TextEditingController(text: 'Hello');
       String resultText = '';
 
       // Build StyledTextEditor widget
@@ -32,7 +34,8 @@ void main() {
       expect(resultText, contains('Hello World'));
     });
 
-    testWidgets('Should apply bold style correctly', (WidgetTester tester) async {
+    testWidgets('Should apply bold style correctly',
+        (WidgetTester tester) async {
       // Create a controller with initial text
       final TextEditingController controller = TextEditingController();
       String resultText = '';
@@ -67,7 +70,8 @@ void main() {
   });
 
   group('StyledTextPreview Tests', () {
-    testWidgets('Should parse and display styled text correctly', (WidgetTester tester) async {
+    testWidgets('Should parse and display styled text correctly',
+        (WidgetTester tester) async {
       // Text with bold, italic and underline styles
       const String styledText = '**Bold** *Italic* __Underline__';
 
